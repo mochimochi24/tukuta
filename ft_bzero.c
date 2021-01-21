@@ -1,25 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memset.c                                        :+:      :+:    :+:   */
+/*   ft_bzero.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: yayito <yayito@student.42tokyo.jp>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/01/21 15:55:00 by yayito            #+#    #+#             */
-/*   Updated: 2021/01/22 08:59:18 by yayito           ###   ########.fr       */
+/*   Created: 2021/01/21 17:22:46 by yayito            #+#    #+#             */
+/*   Updated: 2021/01/22 08:58:52 by yayito           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 
-void	*ft_memset(void *buf, int ch, size_t n)
+void	ft_bzero(void *s, size_t n)
 {
 	unsigned char	moji;
 	unsigned char	*b;
 	int				i;
 
-	moji = ch;
-	b = (unsigned char*)buf;
+	moji = '\0';
+	b = (unsigned char*)s;
 	i = 0;
 	while (n > 0)
 	{
@@ -27,5 +27,5 @@ void	*ft_memset(void *buf, int ch, size_t n)
 		i++;
 		n--;
 	}
-	return (buf);
+	return ;
 }
