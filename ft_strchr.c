@@ -6,7 +6,7 @@
 /*   By: yayito <yayito@student.42tokyo.jp>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/26 18:17:23 by yayito            #+#    #+#             */
-/*   Updated: 2021/01/26 21:34:54 by yayito           ###   ########.fr       */
+/*   Updated: 2021/01/26 23:39:11 by yayito           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,10 +36,10 @@ char	*ft_strchr(const char *s, int c)
 /*
 **int		main(void)
 **{
-**	char	c = '3';
-**	char	s[10] = "123abcde";
-**	printf("%s\n", ft_strchr(s, c));
-**	printf("%s", strchr(s, c));
-**	return (0);
+**char	c = '3';
+**char	s[10] = "123abcde";
+**printf("%s\n", ft_strchr(s, c));
+**printf("%s", strchr(s, c));
+**return (0);
 **}
 */

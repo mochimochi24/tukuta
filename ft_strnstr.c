@@ -6,7 +6,7 @@
 /*   By: yayito <yayito@student.42tokyo.jp>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/26 21:43:47 by yayito            #+#    #+#             */
-/*   Updated: 2021/01/26 22:24:55 by yayito           ###   ########.fr       */
+/*   Updated: 2021/01/26 23:38:40 by yayito           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,11 +44,11 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 /*
 **int		main(void)
 **{
-**	const char	b[10] = "123abcab";
-**	const char	li[10] = "ab";
-**	size_t		le = 5;
+**const char	b[10] = "123abcab";
+**const char	li[10] = "ab";
+**size_t		le = 5;
 **
-**	printf("%s\n", ft_strnstr(b, li, le));
-**	printf("%s", strnstr(b, li, le));
+**printf("%s\n", ft_strnstr(b, li, le));
+**printf("%s", strnstr(b, li, le));
 **}
 */

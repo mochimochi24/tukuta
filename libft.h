@@ -6,7 +6,7 @@
 /*   By: yayito <yayito@student.42tokyo.jp>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/21 12:30:45 by yayito            #+#    #+#             */
-/*   Updated: 2021/01/26 21:43:22 by yayito           ###   ########.fr       */
+/*   Updated: 2021/01/26 22:35:19 by yayito           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,5 +27,6 @@ size_t			ft_strlcat(char *dest, const char *src, size_t size);
 char			*ft_strchr(const char *s, int c);
 char			*ft_strrchr(const char *s, int c);
 char			*ft_strnstr(const char *big, const char *little, size_t len);
+int				ft_strncmp(const char *s1, const char *s2, size_t n);
 
 #endif
