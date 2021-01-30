@@ -6,7 +6,7 @@
 /*   By: yayito <yayito@student.42tokyo.jp>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/27 17:44:11 by yayito            #+#    #+#             */
-/*   Updated: 2021/01/30 21:22:16 by yayito           ###   ########.fr       */
+/*   Updated: 2021/01/31 02:53:56 by yayito           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ int		ft_tolower(char c)
 
 	ret = (int)c;
 	if ('A' <= c && c <= 'Z')
-		ret = (int)(c + 32);
+		ret = (c + 32);
 	return (ret);
 }
 

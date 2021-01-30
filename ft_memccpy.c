@@ -6,7 +6,7 @@
 /*   By: yayito <yayito@student.42tokyo.jp>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/22 11:36:24 by yayito            #+#    #+#             */
-/*   Updated: 2021/01/30 22:26:56 by yayito           ###   ########.fr       */
+/*   Updated: 2021/01/31 04:18:26 by yayito           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,14 +15,14 @@
 void	*ft_memccpy(void *dest, const void *src, int c, size_t n)
 {
 	unsigned char		*de;
-	const unsigned char	*sr;
+	unsigned char		*sr;
 	size_t		i;
 	unsigned char		moji;
 	void		*ret;
 
 	moji = (unsigned char)c;
 	de = (unsigned char*)dest;
-	sr = (const unsigned char*)src;
+	sr = (unsigned char*)src;
 	i = 0;
 	while (i < n && de[i] != moji)
 	{
