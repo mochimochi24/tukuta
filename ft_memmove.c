@@ -6,7 +6,7 @@
 /*   By: yayito <yayito@student.42tokyo.jp>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/22 12:35:50 by yayito            #+#    #+#             */
-/*   Updated: 2021/01/31 04:17:57 by yayito           ###   ########.fr       */
+/*   Updated: 2021/01/31 04:20:25 by yayito           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ void	*ft_memmove(void *buf1, const void *buf2, size_t n)
 	const char	*bf2;
 	size_t		i;
 
-	if (!dst || !src)
+	if (!buf1 || !buf2)
 		return (NULL);
 	bf1 = buf1;
 	bf2 = buf2;
