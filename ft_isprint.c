@@ -6,7 +6,7 @@
 /*   By: yayito <yayito@student.42tokyo.jp>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/27 17:32:45 by yayito            #+#    #+#             */
-/*   Updated: 2021/01/27 17:34:24 by yayito           ###   ########.fr       */
+/*   Updated: 2021/01/28 19:52:16 by yayito           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,10 +19,11 @@ int		ft_isprint(int c)
 	return (0);
 }
 
-
-int		main(void)
-{
-	int		c = 100;
-	printf("%d", ft_isprint(c));
-	return (0);
-}
+/*
+**int		main(void)
+**{
+**int		c = 100;
+**printf("%d", ft_isprint(c));
+**return (0);
+**}
+*/

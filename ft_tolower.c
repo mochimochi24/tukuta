@@ -6,7 +6,7 @@
 /*   By: yayito <yayito@student.42tokyo.jp>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/27 17:44:11 by yayito            #+#    #+#             */
-/*   Updated: 2021/01/27 17:47:39 by yayito           ###   ########.fr       */
+/*   Updated: 2021/01/30 21:22:16 by yayito           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,8 +27,8 @@ int		ft_tolower(char c)
 **{
 **char	c = 'A';
 **char	d = 'b';
-**printf("%d\n", ft_tolower(c));
-**printf("%d", ft_tolower(d));
+**printf("%c\n", ft_tolower(c));
+**printf("%c", ft_tolower(d));
 **return (0);
 **}
 */

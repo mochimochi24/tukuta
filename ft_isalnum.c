@@ -6,7 +6,7 @@
 /*   By: yayito <yayito@student.42tokyo.jp>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/27 17:22:51 by yayito            #+#    #+#             */
-/*   Updated: 2021/01/27 17:25:55 by yayito           ###   ########.fr       */
+/*   Updated: 2021/01/28 19:51:35 by yayito           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,9 +21,11 @@ int		ft_isalnum(int c)
 	return (0);
 }
 
-int		main(void)
-{
-	int		c = 80;
-	printf("%d", ft_isalnum(c));
-	return (0);
-}
+/*
+**int		main(void)
+**{
+**int		c = 80;
+**printf("%d", ft_isalnum(c));
+**return (0);
+**}
+*/
