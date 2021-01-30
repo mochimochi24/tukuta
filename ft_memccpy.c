@@ -6,7 +6,7 @@
 /*   By: yayito <yayito@student.42tokyo.jp>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/22 11:36:24 by yayito            #+#    #+#             */
-/*   Updated: 2021/01/30 21:12:15 by yayito           ###   ########.fr       */
+/*   Updated: 2021/01/30 22:26:56 by yayito           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,8 +21,8 @@ void	*ft_memccpy(void *dest, const void *src, int c, size_t n)
 	void		*ret;
 
 	moji = (unsigned char)c;
-	de = (unsigned char)dest;
-	sr = (const unsigned char)src;
+	de = (unsigned char*)dest;
+	sr = (const unsigned char*)src;
 	i = 0;
 	while (i < n && de[i] != moji)
 	{
@@ -38,19 +38,16 @@ void	*ft_memccpy(void *dest, const void *src, int c, size_t n)
 	}
 	return (NULL);
 }
+
 /*
-**#ifndef TEST
-**
 **int		main(void)
 **{
 **char		str1[10] = "123456789";
 **const char	str2[10] = "abcde";
 **char		*ptr = &str1[2];
 **
-**printf("%p\n", ft_memccpy(ptr, str2, '5', 4));
-**printf("%s", str1);
+**printf("pointer...%p\n", ft_memccpy(ptr, str2, '5', 4));
+**printf("dest...%s", str1);
 **return (0);
 **}
-**
-**#endif
 */

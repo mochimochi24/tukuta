@@ -6,13 +6,13 @@
 /*   By: yayito <yayito@student.42tokyo.jp>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/22 13:21:05 by yayito            #+#    #+#             */
-/*   Updated: 2021/01/22 17:06:59 by yayito           ###   ########.fr       */
+/*   Updated: 2021/01/30 22:00:33 by yayito           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 
-void	*memchr(const void *buf, int ch, size_t n)
+void	*ft_memchr(const void *buf, int ch, size_t n)
 {
 	const char	*bu;
 	char		c;
@@ -39,8 +39,8 @@ void	*memchr(const void *buf, int ch, size_t n)
 **int		main(void)
 **{
 **char	str[10] = "1234567";
-**printf("6nobasho...%p\n", memchr(&str, '6', 5));
-**printf("3nobasho...%p", memchr(&str, '3', 5));
+**printf("6nobasho...%p\n", ft_memchr(&str, '6', 5));
+**printf("3nobasho...%p", ft_memchr(&str, '3', 5));
 **return (0);
 **}
 */
