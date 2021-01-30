@@ -6,7 +6,7 @@
 /*   By: yayito <yayito@student.42tokyo.jp>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/26 22:35:47 by yayito            #+#    #+#             */
-/*   Updated: 2021/01/31 04:21:03 by yayito           ###   ########.fr       */
+/*   Updated: 2021/01/31 05:45:08 by yayito           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,6 @@
 
 int		ft_strncmp(const char *s1, const char *s2, size_t n)
 {
-
 	unsigned char	*str1;
 	unsigned char	*str2;
 	size_t			i;

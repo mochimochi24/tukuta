@@ -6,7 +6,7 @@
 /*   By: yayito <yayito@student.42tokyo.jp>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/26 21:33:55 by yayito            #+#    #+#             */
-/*   Updated: 2021/01/31 04:19:01 by yayito           ###   ########.fr       */
+/*   Updated: 2021/01/31 05:42:11 by yayito           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,18 +18,26 @@ char	*ft_strrchr(const char *s, int c)
 	int		i;
 	char	*ret;
 	char	cc;
+	int		flug;
 
+	flug = 0;
 	cc = (char)c;
 	i = 0;
 	while (s[i])
 	{
 		if (s[i] == cc)
+		{
 			ret = (char*)&s[i];
+			flug = 1;
+		}
 		i++;
 	}
 	if (s[i] == cc)
+	{
 		ret = (char*)&s[i];
-	if (ret)
+		flug = 1;
+	}
+	if (flug = 1)
 		return (ret);
 	return (NULL);
 }
