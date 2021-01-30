@@ -6,11 +6,12 @@
 /*   By: yayito <yayito@student.42tokyo.jp>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/22 11:36:24 by yayito            #+#    #+#             */
-/*   Updated: 2021/01/31 05:44:40 by yayito           ###   ########.fr       */
+/*   Updated: 2021/01/31 07:49:38 by yayito           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
+#include <string.h>
 
 void	*ft_memccpy(void *dest, const void *src, int c, size_t n)
 {
@@ -20,6 +21,8 @@ void	*ft_memccpy(void *dest, const void *src, int c, size_t n)
 	unsigned char		moji;
 	void				*ret;
 
+	if (!dest || !src)
+		return (NULL);
 	moji = (unsigned char)c;
 	de = (unsigned char*)dest;
 	sr = (unsigned char*)src;
@@ -42,12 +45,20 @@ void	*ft_memccpy(void *dest, const void *src, int c, size_t n)
 /*
 **int		main(void)
 **{
-**char		str1[10] = "123456789";
-**const char	str2[10] = "abcde";
-**char		*ptr = &str1[2];
+**char	buff1[] = "abcdefghijklmnopqrstuvwxyz";
+**char	buff2[] = "abcdefghijklmnopqrstuvwxyz";
+**char	*src = "string with\200inside !";
+**memccpy(buff1, src, 0600, 21);
+**ft_memccpy(buff2, src, 0600, 21);
 **
-**printf("pointer...%p\n", ft_memccpy(ptr, str2, '5', 4));
-**printf("dest...%s", str1);
+**Xchar		str1[10] = "123456789";
+**Xconst char	str2[10] = "abcde";
+**Xchar		*ptr = &str1[2];
+**
+**Xprintf("pointer...%p\n", ft_memccpy(ptr, str2, '5', 4));
+**Xprintf("dest...%s", str1);
+**printf("memccpy...%s\n", buff1);
+**printf("ft...%s", buff2);
 **return (0);
 **}
 */

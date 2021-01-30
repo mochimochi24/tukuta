@@ -6,18 +6,20 @@
 /*   By: yayito <yayito@student.42tokyo.jp>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/27 17:22:51 by yayito            #+#    #+#             */
-/*   Updated: 2021/01/31 05:45:40 by yayito           ###   ########.fr       */
+/*   Updated: 2021/01/31 08:10:45 by yayito           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
+#include <ctype.h>
 
 int		ft_isalnum(int c)
 {
 	if (('A' <= c && c <= 'Z') || ('a' <= c && c <= 'z'))
 		return (1);
 	if ('0' <= c && c <= '9')
-		return (0);
+		return (1);
+	return (0);
 }
 
 /*

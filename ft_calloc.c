@@ -1,34 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_toupper.c                                       :+:      :+:    :+:   */
+/*   ft_calloc.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: yayito <yayito@student.42tokyo.jp>         +#+  +:+       +#+        */
+/*   By: yayito </var/mail/yayito>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/01/27 17:37:58 by yayito            #+#    #+#             */
-/*   Updated: 2021/01/31 08:12:42 by yayito           ###   ########.fr       */
+/*   Created: 2021/01/31 06:00:20 by yayito            #+#    #+#             */
+/*   Updated: 2021/01/31 06:53:22 by yayito           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
+#include <stdlib.h>
 
-int		ft_toupper(char c)
+void	*ft_calloc(size_t n, size_t size)
 {
-	int		ret;
+	void	*po;
 
-	ret = c;
-	if ('a' <= c && c <= 'z')
-		ret = (int)(c - 32);
-	return (ret);
+	po = (void*)malloc(n * size);
+	if (!po)
+		return (NULL);
+	while (n > 0)
+	{
+		po =;
+		po++;
+		n--;
+	}
+	return (ptr);
 }
 
-/*
-**int		main(void)
-**{
-**char	c = 'a';
-**char	d = '~';
-**printf("%d\n", ft_toupper(c));
-**printf("%d", ft_toupper(d));
-**return (0);
-**}
-*/
+int		main(void)
+{
+	printf("address...%p", ft_calloc(1, 1));
+	return (0);
+}

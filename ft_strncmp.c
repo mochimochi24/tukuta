@@ -6,7 +6,7 @@
 /*   By: yayito <yayito@student.42tokyo.jp>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/26 22:35:47 by yayito            #+#    #+#             */
-/*   Updated: 2021/01/31 05:45:08 by yayito           ###   ########.fr       */
+/*   Updated: 2021/01/31 08:14:00 by yayito           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ int		ft_strncmp(const char *s1, const char *s2, size_t n)
 			return (0);
 		if (str1[i] != str2[i])
 		{
-			ret = (unsigned char)(str1[i] - str2[i]);
+			ret = (int)(str1[i] - str2[i]);
 			return (ret);
 		}
 		i++;
