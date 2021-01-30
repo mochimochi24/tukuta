@@ -6,7 +6,7 @@
 /*   By: yayito <yayito@student.42tokyo.jp>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/26 21:33:55 by yayito            #+#    #+#             */
-/*   Updated: 2021/01/26 23:39:00 by yayito           ###   ########.fr       */
+/*   Updated: 2021/01/30 21:54:41 by yayito           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,8 @@ char	*ft_strrchr(const char *s, int c)
 			ret = (char*)&s[i];
 		i++;
 	}
+	if (s[i] == cc)
+		ret = (char*)&s[i];
 	if (ret)
 		return (ret);
 	return (NULL);
