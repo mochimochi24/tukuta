@@ -6,7 +6,7 @@
 /*   By: yayito <yayito@student.42tokyo.jp>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/26 22:35:47 by yayito            #+#    #+#             */
-/*   Updated: 2021/01/26 23:38:23 by yayito           ###   ########.fr       */
+/*   Updated: 2021/01/31 02:45:21 by yayito           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,15 +28,15 @@ int		ft_strncmp(const char *s1, const char *s2, size_t n)
 	}
 	if (n == 0)
 		return (0);
-	ret = (int)(s1[i] - s2[i]);
+	ret = (unsigned char)(s1[i] - s2[i]);
 	return (ret);
 }
 
 /*
 **int		main(void)
 **{
-**char	s1[10] = "abc123\0ab";
-**char	s2[10] = "abc123\0BZ";
+**char	s1[10] = "abc123\0aa";
+**char	s2[10] = "abc123\0Ba";
 **size_t	n = 8;
 **
 **printf("%d\n", ft_strncmp(s1, s2, n));
