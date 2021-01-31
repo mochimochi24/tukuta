@@ -6,7 +6,7 @@
 /*   By: yayito <yayito@student.42tokyo.jp>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/27 00:53:21 by yayito            #+#    #+#             */
-/*   Updated: 2021/01/31 02:26:02 by yayito           ###   ########.fr       */
+/*   Updated: 2021/01/31 09:16:08 by yayito           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,6 +30,8 @@ int		ft_atoi(const char *nptr)
 		i++;
 	while ('0' <= nptr[i] && nptr[i] <= '9')
 	{
+		if (ret == 214748364 && nptr[i] == '8')
+			return (-2147483648);
 		ret *= 10;
 		ret += (nptr[i] - '0');
 		i++;

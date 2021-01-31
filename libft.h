@@ -6,7 +6,7 @@
 /*   By: yayito <yayito@student.42tokyo.jp>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/21 12:30:45 by yayito            #+#    #+#             */
-/*   Updated: 2021/01/31 08:52:20 by yayito           ###   ########.fr       */
+/*   Updated: 2021/01/31 09:36:54 by yayito           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,6 +36,8 @@ int				ft_isascii(int c);
 int				ft_toupper(int c);
 int				ft_tolower(int c);
 void			*ft_calloc(size_t n, size_t size);
-char			*ft_strdup(const char *s)
+char			*ft_strdup(const char *s);
+void			ft_putchar_fd(char c, int fd);
+void			ft_putstr_fd(char *s, int fd);
 
 #endif
