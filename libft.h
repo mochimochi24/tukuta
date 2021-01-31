@@ -6,7 +6,7 @@
 /*   By: yayito <yayito@student.42tokyo.jp>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/21 12:30:45 by yayito            #+#    #+#             */
-/*   Updated: 2021/01/31 09:36:54 by yayito           ###   ########.fr       */
+/*   Updated: 2021/01/31 09:54:34 by yayito           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,5 +39,7 @@ void			*ft_calloc(size_t n, size_t size);
 char			*ft_strdup(const char *s);
 void			ft_putchar_fd(char c, int fd);
 void			ft_putstr_fd(char *s, int fd);
+void			ft_putendl_fd(char *s, int fd);
+void			ft_putnbr_fd(int n, int fd);
 
 #endif
