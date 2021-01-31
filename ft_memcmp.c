@@ -6,7 +6,7 @@
 /*   By: yayito <yayito@student.42tokyo.jp>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/22 17:08:12 by yayito            #+#    #+#             */
-/*   Updated: 2021/01/31 08:05:58 by yayito           ###   ########.fr       */
+/*   Updated: 2021/01/31 08:27:03 by yayito           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,17 +39,17 @@ int		ft_memcmp(const void *buf1, const void *buf2, size_t n)
 	return (0);
 }
 
-
-int		main(void)
-{
-	const char	str1[100] = "abcMACOSX";
-	const char	str2[100] = "abcMBS";
-	printf("mem...%d\n", memcmp(str1, str2, 3));
-	printf("ft...%d\n", ft_memcmp(str1, str2, 3));
-	printf("mem...%d\n", memcmp(str1, str2, 4));
-	printf("ft...%d\n", ft_memcmp(str1, str2, 4));
-	printf("mem...%d\n", memcmp(str1, str2, 5));
-	printf("ft...%d", ft_memcmp(str1, str2, 5));
-	return (0);
-}
-
+/*
+**int		main(void)
+**{
+**	const char	str1[100] = "abcMACOSX";
+**	const char	str2[100] = "abcMBS";
+**	printf("mem...%d\n", memcmp(str1, str2, 3));
+**	printf("ft...%d\n", ft_memcmp(str1, str2, 3));
+**	printf("mem...%d\n", memcmp(str1, str2, 4));
+**	printf("ft...%d\n", ft_memcmp(str1, str2, 4));
+**	printf("mem...%d\n", memcmp(str1, str2, 5));
+**	printf("ft...%d", ft_memcmp(str1, str2, 5));
+**	return (0);
+**}
+*/

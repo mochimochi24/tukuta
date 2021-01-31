@@ -1,43 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_calloc.c                                        :+:      :+:    :+:   */
+/*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: yayito </var/mail/yayito>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/01/31 06:00:20 by yayito            #+#    #+#             */
-/*   Updated: 2021/01/31 08:59:07 by yayito           ###   ########.fr       */
+/*   Created: 2021/01/31 08:50:10 by yayito            #+#    #+#             */
+/*   Updated: 2021/01/31 09:09:01 by yayito           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 
-void	*ft_calloc(size_t n, size_t size)
+char *ft_strdup(const char *s)
 {
-	void	*po;
+	size_t	i;
+	char	*po;
 
-	if (n == 0 || size == 0)
-	{
-		n = 1;
-		size = 1;
-	}
-	po = (void*)malloc(n * size);
+	i = (ft_strlen(s) + 1);
+	po = (void*)malloc(i);
 	if (!po)
-		return (NULL);
-	while (n > 0)
-	{
-		po = 0;
-		po++;
-		n--;
-	}
+		reurn (NULL);
+	ft_memcpy(po, s, i);
 	return (po);
 }
-
-/*
-**int		main(void)
-**{
-**	printf("address...%p", ft_calloc(1, 1));
-**	return (0);
-**}
-*/
