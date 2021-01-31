@@ -6,7 +6,7 @@
 /*   By: yayito <yayito@student.42tokyo.jp>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/31 09:26:49 by yayito            #+#    #+#             */
-/*   Updated: 2021/01/31 09:47:58 by yayito           ###   ########.fr       */
+/*   Updated: 2021/01/31 12:35:12 by yayito           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,5 +15,5 @@
 void ft_putchar_fd(char c, int fd)
 {
 	write(fd, &c, 1);
-	return (0);
+	return ;
 }
