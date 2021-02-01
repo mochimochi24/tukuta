@@ -6,7 +6,7 @@
 /*   By: yayito <yayito@student.42tokyo.jp>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/01 14:27:45 by yayito            #+#    #+#             */
-/*   Updated: 2021/02/02 00:46:49 by yayito           ###   ########.fr       */
+/*   Updated: 2021/02/02 01:45:53 by yayito           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,24 +24,22 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	ret = (char*)malloc(len + 1);
 	if (!ret)
 		return (NULL);
-	while (j < len)
-	{
-		if (!s[i])
-			break ;
+//	if ((unsigned int)ft_strlen(s) <= start)
+//	{
+//	}
+	while (j < len && s[i] && (unsigned int)ft_strlen(s) > start)
 		ret[j++] = s[i++];
-	}
-	if (i < len)
-		ret[j] = s[i];
+	ret[j] = '\0';
 	return (ret);
 }
 
-/*
+
 int		main(void)
 {
 	char	*str;
-	str = ft_substr("aiueo", 2, 2);
+	str = ft_substr("aiueo", 10, 10);
 	printf("%s", str);
 	free(str);
 	return (0);
 }
-*/
+
