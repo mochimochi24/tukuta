@@ -6,7 +6,7 @@
 /*   By: yayito <yayito@student.42tokyo.jp>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/22 17:08:12 by yayito            #+#    #+#             */
-/*   Updated: 2021/02/01 10:28:11 by yayito           ###   ########.fr       */
+/*   Updated: 2021/02/01 12:17:57 by yayito           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,25 +33,17 @@ int		ft_memcmp(const void *buf1, const void *buf2, size_t n)
 	}
 	if (i == n)
 		i--;
-	ret = (bu1[i] - bu2[i]);
-	if (ret > 0)
-		return (1);
-	if (ret < 0)
-		return (-1);
-	return (0);
+	ret = (unsigned char)(bu1[i] - bu2[i]);
+	return (ret);
 }
 
 /*
-**int		main(void)
-**{
-**	const char	str1[100] = "abcMACOSX";
-**	const char	str2[100] = "abcMBS";
-**	printf("mem...%d\n", memcmp(str1, str2, 3));
-**	printf("ft...%d\n", ft_memcmp(str1, str2, 3));
-**	printf("mem...%d\n", memcmp(str1, str2, 4));
-**	printf("ft...%d\n", ft_memcmp(str1, str2, 4));
-**	printf("mem...%d\n", memcmp(str1, str2, 5));
-**	printf("ft...%d", ft_memcmp(str1, str2, 5));
-**	return (0);
-**}
+int		main(void)
+{
+	char	*s1 = "\xff\xaa\xde\200";
+	char	*s2 = "\xff\xaa\xde\0";
+	printf("mem...%d\n", memcmp(s1, s2, 8));
+	printf("ft...%d\n", ft_memcmp(s1, s2, 8));
+	return (0);
+}
 */

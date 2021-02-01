@@ -6,7 +6,7 @@
 /*   By: yayito <yayito@student.42tokyo.jp>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/27 00:53:21 by yayito            #+#    #+#             */
-/*   Updated: 2021/01/31 09:16:08 by yayito           ###   ########.fr       */
+/*   Updated: 2021/02/01 11:58:01 by yayito           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,7 +44,7 @@ int		ft_atoi(const char *nptr)
 /*
 **int		main(void)
 **{
-**char	n[20] = "  +4242ab24";
+**char	n[20] = "  -2147483648ab24";
 **printf("%d\n", ft_atoi(n));
 **printf("%d", atoi(n));
 **return (0);
