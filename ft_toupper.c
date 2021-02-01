@@ -6,7 +6,7 @@
 /*   By: yayito <yayito@student.42tokyo.jp>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/27 17:37:58 by yayito            #+#    #+#             */
-/*   Updated: 2021/01/31 09:29:17 by yayito           ###   ########.fr       */
+/*   Updated: 2021/02/01 11:49:57 by yayito           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,8 @@
 
 int		ft_toupper(char c)
 {
-	int		ret;
-
-	ret = c;
 	if ('a' <= c && c <= 'z')
-		ret = (int)(c - 32);
-	return (ret);
+		return (c);
 }
 
 /*

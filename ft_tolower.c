@@ -6,20 +6,17 @@
 /*   By: yayito <yayito@student.42tokyo.jp>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/27 17:44:11 by yayito            #+#    #+#             */
-/*   Updated: 2021/01/31 08:12:15 by yayito           ###   ########.fr       */
+/*   Updated: 2021/02/01 11:00:17 by yayito           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 
-int		ft_tolower(char c)
+int		ft_tolower(int c)
 {
-	int		ret;
-
-	ret = c;
 	if ('A' <= c && c <= 'Z')
-		ret = (int)(c + 32);
-	return (ret);
+		return (c + 32);
+	return (c);
 }
 
 /*

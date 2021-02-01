@@ -6,7 +6,7 @@
 /*   By: yayito <yayito@student.42tokyo.jp>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/22 11:36:24 by yayito            #+#    #+#             */
-/*   Updated: 2021/01/31 13:23:33 by yayito           ###   ########.fr       */
+/*   Updated: 2021/02/01 10:18:42 by yayito           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,12 +25,12 @@ void	*ft_memccpy(void *dest, const void *src, int c, size_t n)
 	s = (unsigned char*)src;
 	moji = (unsigned char)c;
 	i = 0;
-	while (i < n && de[i] != moji)
+	while (i < n && s[i] != moji)
 	{
 		de[i] = s[i];
 		i++;
 	}
-	if (de[i] == moji)
+	if (s[i] == moji)
 	{
 		de[i] = s[i];
 		i++;
@@ -46,8 +46,8 @@ void	*ft_memccpy(void *dest, const void *src, int c, size_t n)
 **char	buff1[] = "abcdefghijklmnopqrstuvwxyz";
 **char	buff2[] = "abcdefghijklmnopqrstuvwxyz";
 **char	*src = "string with\200inside !";
-**memccpy(buff1, src, 0600, 21);
-**ft_memccpy(buff2, src, 0600, 21);
+**memccpy(buff1, src, 116, 21);
+**ft_memccpy(buff2, src, 116, 21);
 **
 **Xchar		str1[10] = "123456789";
 **Xconst char	str2[10] = "abcde";

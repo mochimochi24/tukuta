@@ -6,7 +6,7 @@
 /*   By: yayito <yayito@student.42tokyo.jp>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/22 17:08:12 by yayito            #+#    #+#             */
-/*   Updated: 2021/01/31 08:27:03 by yayito           ###   ########.fr       */
+/*   Updated: 2021/02/01 10:28:11 by yayito           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,8 @@ int		ft_memcmp(const void *buf1, const void *buf2, size_t n)
 	int			ret;
 	size_t		i;
 
+	if (n == 0)
+		return (0);
 	bu1 = (const char*)buf1;
 	bu2 = (const char*)buf2;
 	i = 0;
