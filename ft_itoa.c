@@ -6,7 +6,7 @@
 /*   By: yayito </var/mail/yayito>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/04 16:19:22 by yayito            #+#    #+#             */
-/*   Updated: 2021/02/04 17:08:09 by yayito           ###   ########.fr       */
+/*   Updated: 2021/02/04 18:06:04 by yayito           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,10 @@ static int	length_of_int(int nn)
 	int	i;
 
 	i = 0;
+	if (nn == -2147483648)
+		return (10);
+	if (nn < 0)
+		nn *= -1;
 	while (nn >= 10)
 	{
 		i++;
@@ -29,14 +33,21 @@ static int	length_of_int(int nn)
 
 static void	kakiko(int n, int keta, char *ret)
 {
+	int	amari;
+
 	ret[keta] = '\0';
 	keta--;
-	while (n >= 10)
+	while (n >= 10 || n <= -10)
 	{
-		ret[keta] = ((n % 10) + '0');
+		amari = (n % 10);
+		if (amari < 0)
+			amari *= -1;
+		ret[keta] = (amari + '0');
 		n = (n / 10);
 		keta--;
 	}
+	if (n < 0)
+		n *= -1;
 	ret[keta] = (n + '0');
 	return ;
 }
@@ -49,19 +60,11 @@ char 		*ft_itoa(int n)
 
 	maina = 0;
 	if (n < 0)
-	{
 		maina = 1;
-		n *= -1;
-	}
 	i = length_of_int(n);
 	ret = (char*)malloc(i + maina + 1);
 	if (!ret)
 		return (NULL);
-	if (n == -2147483648)
-	{
-		ret = "-2147483648";
-		return (ret);
-	}
 	kakiko(n, i + maina, ret);
 	if (maina == 1)
 		ret[0] = '-';
