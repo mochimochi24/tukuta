@@ -1,48 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strjoin.c                                       :+:      :+:    :+:   */
+/*   ft_strmapi.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: yayito <yayito@student.42tokyo.jp>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/02/02 01:58:48 by yayito            #+#    #+#             */
-/*   Updated: 2021/02/04 18:10:57 by yayito           ###   ########.fr       */
+/*   Created: 2021/02/04 18:08:55 by yayito            #+#    #+#             */
+/*   Updated: 2021/02/04 18:32:56 by yayito           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 #include <stdio.h>
 
-char	*ft_strjoin(char const *s1, char const *s2)
+char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
-	int		i;
-	int		j;
 	char	*ret;
+	int		i;
 
 	i = 0;
-	j = 0;
-	ret = (char*)malloc(ft_strlen(s1) + ft_strlen(s2) + 1);
+	ret = (char*)malloc(ft_strlen(s) + 1);
 	if (!ret)
 		return (NULL);
-	while (s1[i])
+	while (s[i])
 	{
-		ret[i] = s1[i];
+		ret[i] = (*f)(i, s[i]);
 		i++;
-		j++;
 	}
-	i = 0;
-	while (s2[i])
-	{
-		ret[j++] = s2[i++];
-	}
-	ret[j] = '\0';
+	ret[i] = '\0';
 	return (ret);
 }
-
-/*
-**int		main(void)
-**{
-**	printf("%s", ft_strjoin("42", "tokyo"));
-**	return (0);
-**}
-*/
