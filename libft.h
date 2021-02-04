@@ -6,7 +6,7 @@
 /*   By: yayito <yayito@student.42tokyo.jp>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/21 12:30:45 by yayito            #+#    #+#             */
-/*   Updated: 2021/02/04 16:13:00 by yayito           ###   ########.fr       */
+/*   Updated: 2021/02/04 16:18:47 by yayito           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,5 +43,6 @@ void			ft_putendl_fd(char *s, int fd);
 void			ft_putnbr_fd(int n, int fd);
 char			*ft_substr(char const *s, unsigned int start, size_t len);
 char			*ft_strjoin(char const *s1, char const *s2);
+char			*ft_itoa(int n);
 
 #endif
