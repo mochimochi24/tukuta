@@ -6,7 +6,7 @@
 /*   By: yayito <yayito@student.42tokyo.jp>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/04 18:43:49 by yayito            #+#    #+#             */
-/*   Updated: 2021/02/04 21:20:09 by yayito           ###   ########.fr       */
+/*   Updated: 2021/02/04 21:38:43 by yayito           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,7 @@ static int	setdesuka(char const a, char const *set)
 	return (0);
 }
 
+/*
 int	ft_strlen(const char *s)
 {
 	int	i;
@@ -35,6 +36,7 @@ int	ft_strlen(const char *s)
 		i++;
 	return (i);
 }
+*/
 
 char	*ft_strtrim(char const *s1, char const *set)
 {
@@ -46,15 +48,10 @@ char	*ft_strtrim(char const *s1, char const *set)
 	i = 0;
 	hidari = 0;
 	while (s1[hidari] && setdesuka(s1[hidari], set) == 1)
-		i++;
-	if (hidari > 0)
-		hidari--;
-	migi = ft_strlen(s1);
-	while (migi > hidari)
-	{
-		if (setdesuka(s1[migi--], set) == 0)
-			break ;
-	}
+		hidari++;
+	migi = ft_strlen(s1) - 1;
+	while (migi > hidari && setdesuka(s1[migi], set) == 1)
+		migi--;
 	ret = (char*)malloc(migi - hidari + 2);
 	if (!ret)
 		return (NULL);
