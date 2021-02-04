@@ -6,7 +6,7 @@
 /*   By: yayito <yayito@student.42tokyo.jp>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/04 18:43:49 by yayito            #+#    #+#             */
-/*   Updated: 2021/02/04 21:38:43 by yayito           ###   ########.fr       */
+/*   Updated: 2021/02/04 21:53:52 by yayito           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 
 static int	setdesuka(char const a, char const *set)
 {
-	int	i;
+	int		i;
 
 	i = 0;
 	while (set[i])
@@ -26,19 +26,7 @@ static int	setdesuka(char const a, char const *set)
 	return (0);
 }
 
-/*
-int	ft_strlen(const char *s)
-{
-	int	i;
-
-	i = 0;
-	while (s[i])
-		i++;
-	return (i);
-}
-*/
-
-char	*ft_strtrim(char const *s1, char const *set)
+char		*ft_strtrim(char const *s1, char const *set)
 {
 	char	*ret;
 	int		hidari;
@@ -62,12 +50,12 @@ char	*ft_strtrim(char const *s1, char const *set)
 }
 
 /*
-int		main(void)
-{
-	char	*s1 = "Hello \t  Please\n Trim me !";
-	char	*set = " \n\t";
-
-	printf("%s", ft_strtrim(s1, set));
-	return (0);
-}
+**int		main(void)
+**{
+**	char	*s1 = "Hello \t  Please\n Trim me !";
+**	char	*set = " \n\t";
+**
+**	printf("%s", ft_strtrim(s1, set));
+**	return (0);
+**}
 */

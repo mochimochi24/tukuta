@@ -6,13 +6,13 @@
 /*   By: yayito <yayito@student.42tokyo.jp>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/31 09:26:49 by yayito            #+#    #+#             */
-/*   Updated: 2021/01/31 12:35:12 by yayito           ###   ########.fr       */
+/*   Updated: 2021/02/04 21:43:34 by yayito           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
-void ft_putchar_fd(char c, int fd)
+void	ft_putchar_fd(char c, int fd)
 {
 	write(fd, &c, 1);
 	return ;

@@ -6,7 +6,7 @@
 /*   By: yayito <yayito@student.42tokyo.jp>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/04 16:19:22 by yayito            #+#    #+#             */
-/*   Updated: 2021/02/04 18:09:53 by yayito           ###   ########.fr       */
+/*   Updated: 2021/02/04 21:45:05 by yayito           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,7 +52,7 @@ static void	kakiko(int n, int keta, char *ret)
 	return ;
 }
 
-char 		*ft_itoa(int n)
+char		*ft_itoa(int n)
 {
 	int		i;
 	char	*ret;

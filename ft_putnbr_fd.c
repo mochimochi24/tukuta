@@ -6,7 +6,7 @@
 /*   By: yayito <yayito@student.42tokyo.jp>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/31 09:55:05 by yayito            #+#    #+#             */
-/*   Updated: 2021/02/01 14:00:59 by yayito           ###   ########.fr       */
+/*   Updated: 2021/02/04 21:45:39 by yayito           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,9 +42,9 @@ void	ft_putnbr_fd(int n, int fd)
 }
 
 /*
-int		main(void)
-{
-	ft_putnbr_fd(-483647, 1);
-	return (0);
-}
+**int		main(void)
+**{
+**	ft_putnbr_fd(-483647, 1);
+**	return (0);
+**}
 */

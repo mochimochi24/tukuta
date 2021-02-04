@@ -6,13 +6,13 @@
 /*   By: yayito <yayito@student.42tokyo.jp>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/31 09:50:28 by yayito            #+#    #+#             */
-/*   Updated: 2021/01/31 09:53:31 by yayito           ###   ########.fr       */
+/*   Updated: 2021/02/04 21:43:56 by yayito           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
-void ft_putendl_fd(char *s, int fd)
+void	ft_putendl_fd(char *s, int fd)
 {
 	char	br;
 
