@@ -6,7 +6,7 @@
 /*   By: yayito <yayito@student.42tokyo.jp>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/04 21:57:10 by yayito            #+#    #+#             */
-/*   Updated: 2021/02/05 17:55:19 by yayito           ###   ########.fr       */
+/*   Updated: 2021/02/05 18:22:43 by yayito           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,10 +40,14 @@ static char	**makepoipoi(char const *s, char c)
 			yousosu++;
 		i++;
 	}
-	poipoi = (char**)malloc((sizeof(char*) * yousosu) + 1);
+	poipoi = (char**)malloc(sizeof(char*) * yousosu + 1);
+
+//	DEBUG
+//	printf("size...%lu\n", ((sizeof(char*) * yousosu) + 1));
+
 	if (!poipoi)
 		return (NULL);
-	poipoi[yousosu + 1] = NULL;
+	poipoi[yousosu] = NULL;
 
 //	DEBUG
 //	printf("yousosu...%d\n", yousosu);
@@ -90,38 +94,32 @@ static char **fillret(char const *s, char c, char **ret)
 		while (s[j] == c)
 			j++;
 		leng = partlen(s, c, j);
-
-//		DEBUG
-//		if (i > 0)
-//			printf("i=%D.ret[0]daijobu?...%s\n", i, ret[0]);
-
 		ret[i] = (char*)malloc(leng + 1);
-
-//		DEBUG
-//		if(i > 0)
-//			printf("i=%D.ret[0]daijobu?...%s\n", i, ret[0]);
-
 		if (!ret[i])
 			return (zenkesi(ret));
 		while (s[j] && s[j] != c)
 			ret[i][nn++] = s[j++];
 		ret[i][nn] = '\0';
 		nn = 0;
-
+/*
 //		DEBUG
-//		printf("i = %d\n",i);
-//		printf("partlen...%d\n",leng);
-//		printf("ret[0]...%s\n",ret[0]);
-//		if (i >= 1)
-//			printf("ret[1]...%s\n",ret[1]);
-//		if (i >= 2)
-//			printf("ret[2]...%s\n",ret[2]);
-//		if (i >= 3)
-//			printf("ret[3]...%s\n",ret[3]);
-//		if (i >= 4)
-//			printf("ret[4]...%s\n",ret[4]);
-//		printf("\n");
-
+		printf("i = %d\n",i);
+		printf("partlen...%d\n",leng);
+		printf("ret[0]...%s\n",ret[0]);
+		if (i >= 1)
+			printf("ret[1]...%s\n",ret[1]);
+		if (i >= 2)
+			printf("ret[2]...%s\n",ret[2]);
+		if (i >= 3)
+			printf("ret[3]...%s\n",ret[3]);
+		if (i >= 4)
+			printf("ret[4]...%s\n",ret[4]);
+		if (i >= 5)
+			printf("ret[5]...%s\n",ret[5]);
+		if (i >= 6)
+			printf("ret[6]...%s\n",ret[6]);
+		printf("\n");
+*/
 		i++;
 	}
 	return (ret);
@@ -143,22 +141,22 @@ char	**ft_split(char const *s, char c)
 int		main(void)
 {
 //	char	str[35] = "7first7second777third77fourth!!";
-	char	str[35] = "7first7second7third777";
+	char	str[50] = "111111split1111111this1for111me11!1111111";
 	char	*ptr;
 	char	**re;
-//	int		i = 0;
+	int		i = 0;
 
 	ptr = &str[0];
-	re = ft_split(ptr, '7');
-//	printf("%s\n", re[0]);
+	re = ft_split(ptr, '1');
+//	printf("\nresult...\n%s\n", re[0]);
 //	printf("%s\n", re[1]);
 //	printf("%s\n", re[2]);
 //	printf("%s", re[3]);
-//	while (re[i] != 0)
-//	{
-//		printf("re[%d] = %s\n",i , re[i]);
-//		i++;
-//	}
+	while (re[i] != 0)
+	{
+		printf("re[%d] = %s\n",i , re[i]);
+		i++;
+	}
 	return (0);
 }
 */
