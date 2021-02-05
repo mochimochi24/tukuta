@@ -6,7 +6,7 @@
 /*   By: yayito <yayito@student.42tokyo.jp>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/04 21:57:10 by yayito            #+#    #+#             */
-/*   Updated: 2021/02/05 14:54:21 by yayito           ###   ########.fr       */
+/*   Updated: 2021/02/05 15:54:48 by yayito           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -86,13 +86,36 @@ static char **fillret(char const *s, char c, char **ret)
 		while (s[j] == c)
 			j++;
 		leng = partlen(s, c, j);
+
+//		DEBUG
+		if (i > 0)
+			printf("i=%D.ret[0]daijobu?...%s\n", i, ret[0]);
+
 		ret[i] = (char*)malloc(leng + 1);
+
+//		DEBUG
+		if(i > 0)
+			printf("i=%D.ret[0]daijobu?...%s\n", i, ret[0]);
+
 		if (!ret[i])
 			return (zenkesi(ret));
 		while (s[j] && s[j] != c)
 			ret[i][nn++] = s[j++];
 		ret[i][nn] = '\0';
 		nn = 0;
+
+//		DEBUG
+		printf("i = %d\n",i);
+		printf("partlen...%d\n",leng);
+		printf("ret[0]...%s\n",ret[0]);
+		if (i >= 1)
+			printf("ret[1]...%s\n",ret[1]);
+		if (i >= 2)
+			printf("ret[2]...%s\n",ret[2]);
+		if (i >= 3)
+			printf("ret[3]...%s\n",ret[3]);
+		printf("\n");
+
 		i++;
 	}
 	return (ret);
@@ -110,19 +133,21 @@ char	**ft_split(char const *s, char c)
 	return (fillret(s, c, ret));
 }
 
+/*
 int		main(void)
 {
-	char	str[30] = "sfgr7dg777df77s";
+//	char	str[35] = "7first7second777third77fourth!!";
+	char	str[35] = "7first7second";
 	char	*ptr;
 	char	**re;
 //	int		i = 0;
 
 	ptr = &str[0];
 	re = ft_split(ptr, '7');
-	printf("%s\n", re[0]);
-	printf("%s\n", re[1]);
-	printf("%s\n", re[2]);
-	printf("%s", re[3]);
+//	printf("%s\n", re[0]);
+//	printf("%s\n", re[1]);
+//	printf("%s\n", re[2]);
+//	printf("%s", re[3]);
 //	while (re[i] != 0)
 //	{
 //		printf("re[%d] = %s\n",i , re[i]);
@@ -130,3 +155,4 @@ int		main(void)
 //	}
 	return (0);
 }
+*/
