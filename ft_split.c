@@ -6,7 +6,7 @@
 /*   By: yayito <yayito@student.42tokyo.jp>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/04 21:57:10 by yayito            #+#    #+#             */
-/*   Updated: 2021/02/05 18:22:43 by yayito           ###   ########.fr       */
+/*   Updated: 2021/02/05 18:37:46 by yayito           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -141,22 +141,24 @@ char	**ft_split(char const *s, char c)
 int		main(void)
 {
 //	char	str[35] = "7first7second777third77fourth!!";
-	char	str[50] = "111111split1111111this1for111me11!1111111";
+	char	str[50] = "      split       this for   me  !       ";
 	char	*ptr;
-	char	**re;
+	char	**ret;
 	int		i = 0;
 
 	ptr = &str[0];
-	re = ft_split(ptr, '1');
+	ret = ft_split(ptr, ' ');
+	printf("\nresult...\n");
 //	printf("\nresult...\n%s\n", re[0]);
 //	printf("%s\n", re[1]);
 //	printf("%s\n", re[2]);
 //	printf("%s", re[3]);
-	while (re[i] != 0)
+	while (ret[i] != 0)
 	{
-		printf("re[%d] = %s\n",i , re[i]);
+		printf("ret[%d]...%s\n",i , ret[i]);
 		i++;
 	}
+	printf("ret[%d]...%s = %p",i , ret[i], ret[i]);
 	return (0);
 }
 */
