@@ -6,12 +6,13 @@
 /*   By: yayito <yayito@student.42tokyo.jp>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/04 21:57:10 by yayito            #+#    #+#             */
-/*   Updated: 2021/02/05 18:37:46 by yayito           ###   ########.fr       */
+/*   Updated: 2021/02/05 20:18:30 by yayito           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 #include <stdio.h>
+#include <string.h>
 
 static char	**nulnul(void)
 {
@@ -40,10 +41,10 @@ static char	**makepoipoi(char const *s, char c)
 			yousosu++;
 		i++;
 	}
-	poipoi = (char**)malloc(sizeof(char*) * yousosu + 1);
+	poipoi = (char**)malloc(sizeof(char*) * (yousosu + 1));
 
 //	DEBUG
-//	printf("size...%lu\n", ((sizeof(char*) * yousosu) + 1));
+//	printf("size...%lu\n", (sizeof(char*) * (yousosu + 1));
 
 	if (!poipoi)
 		return (NULL);
@@ -89,7 +90,7 @@ static char **fillret(char const *s, char c, char **ret)
 	nn = 0;
 	j = 0;
 	i = 0;
-	while (ret[i] != NULL && s[j])
+	while (ret[i] && s[j])
 	{
 		while (s[j] == c)
 			j++;
@@ -133,22 +134,23 @@ char	**ft_split(char const *s, char c)
 		return (nulnul());
 	ret = makepoipoi(s, c);
 	if (!ret)
-		return (NULL);
+		return (ret);
 	return (fillret(s, c, ret));
 }
 
 /*
 int		main(void)
 {
-//	char	str[35] = "7first7second777third77fourth!!";
+//	char	str[50] = "777fourth!!";
 	char	str[50] = "      split       this for   me  !       ";
+//	char	str[50] = "olol                     ";
 	char	*ptr;
 	char	**ret;
 	int		i = 0;
 
 	ptr = &str[0];
 	ret = ft_split(ptr, ' ');
-	printf("\nresult...\n");
+	printf("result:\n");
 //	printf("\nresult...\n%s\n", re[0]);
 //	printf("%s\n", re[1]);
 //	printf("%s\n", re[2]);
