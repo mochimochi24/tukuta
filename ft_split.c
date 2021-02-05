@@ -6,7 +6,7 @@
 /*   By: yayito <yayito@student.42tokyo.jp>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/04 21:57:10 by yayito            #+#    #+#             */
-/*   Updated: 2021/02/05 14:40:53 by yayito           ###   ########.fr       */
+/*   Updated: 2021/02/05 14:45:44 by yayito           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,14 +47,14 @@ static char	**makepoipoi(char const *s, char c)
 	return (poipoi);
 }
 
-static int	partlen(*spart, c)
+static int	partlen(char const *s, char c, int j)
 {
 	int		i;
 
 	i = 0;
-	while (spart != '\0' && spart != c)
+	while (s[j] != '\0' && s[j] != c)
 	{
-		spart++;
+		j++;
 		i++;
 	}
 	return (i);
@@ -85,12 +85,12 @@ static char **fillret(char const *s, char c, char **ret)
 	{
 		while (s[j] == c)
 			j++;
-		leng = partlen(&s[j], c);
+		leng = partlen(s, c, j);
 		ret[i] = (char*)malloc(leng + 1);
 		if (!ret[i])
 			return (zenkesi(ret));
 		while (s[j] && s[j] != c)
-			ret[i][nn++] == s[j++];
+			ret[i][nn++] = s[j++];
 		ret[i][nn] = '\0';
 		nn = 0;
 		i++;
