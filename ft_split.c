@@ -6,7 +6,7 @@
 /*   By: yayito <yayito@student.42tokyo.jp>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/04 21:57:10 by yayito            #+#    #+#             */
-/*   Updated: 2021/02/05 14:45:44 by yayito           ###   ########.fr       */
+/*   Updated: 2021/02/05 14:54:21 by yayito           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -107,8 +107,7 @@ char	**ft_split(char const *s, char c)
 	ret = makepoipoi(s, c);
 	if (!ret)
 		return (NULL);
-	fillret(s, c, ret);
-	return (ret);
+	return (fillret(s, c, ret));
 }
 
 int		main(void)
@@ -116,12 +115,18 @@ int		main(void)
 	char	str[30] = "sfgr7dg777df77s";
 	char	*ptr;
 	char	**re;
+//	int		i = 0;
 
 	ptr = &str[0];
 	re = ft_split(ptr, '7');
-//	printf("%s\n", re[0]);
-//	printf("%s\n", re[1]);
-//	printf("%s\n", re[2]);
-//	printf("%s\n", re[3]);
+	printf("%s\n", re[0]);
+	printf("%s\n", re[1]);
+	printf("%s\n", re[2]);
+	printf("%s", re[3]);
+//	while (re[i] != 0)
+//	{
+//		printf("re[%d] = %s\n",i , re[i]);
+//		i++;
+//	}
 	return (0);
 }
