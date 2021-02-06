@@ -6,11 +6,11 @@
 /*   By: yayito <yayito@student.42tokyo.jp>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/27 17:19:11 by yayito            #+#    #+#             */
-/*   Updated: 2021/01/27 17:24:57 by yayito           ###   ########.fr       */
+/*   Updated: 2021/02/06 15:09:54 by yayito           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+#include "libft.h"
 
 int		ft_isdigit(int c)
 {

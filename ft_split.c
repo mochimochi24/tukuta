@@ -6,13 +6,11 @@
 /*   By: yayito <yayito@student.42tokyo.jp>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/04 21:57:10 by yayito            #+#    #+#             */
-/*   Updated: 2021/02/06 12:23:48 by yayito           ###   ########.fr       */
+/*   Updated: 2021/02/06 15:13:19 by yayito           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
-#include <stdio.h>
-#include <string.h>
+#include "libft.h"
 
 static char	**makepoipoi(char const *s, char c)
 {

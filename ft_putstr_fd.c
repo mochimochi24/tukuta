@@ -6,11 +6,11 @@
 /*   By: yayito <yayito@student.42tokyo.jp>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/31 09:37:15 by yayito            #+#    #+#             */
-/*   Updated: 2021/01/31 12:35:28 by yayito           ###   ########.fr       */
+/*   Updated: 2021/02/06 15:15:06 by yayito           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+#include "libft.h"
 
 void	ft_putstr_fd(char *s, int fd)
 {

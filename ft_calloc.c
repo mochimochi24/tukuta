@@ -6,12 +6,11 @@
 /*   By: yayito <yayito@student.42tokyo.jp>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/31 06:00:20 by yayito            #+#    #+#             */
-/*   Updated: 2021/02/01 13:09:38 by yayito           ###   ########.fr       */
+/*   Updated: 2021/02/06 15:11:26 by yayito           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <stdlib.h>
+#include "libft.h"
 
 void	*ft_calloc(size_t n, size_t size)
 {

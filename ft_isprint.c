@@ -6,11 +6,11 @@
 /*   By: yayito <yayito@student.42tokyo.jp>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/27 17:32:45 by yayito            #+#    #+#             */
-/*   Updated: 2021/01/28 19:52:16 by yayito           ###   ########.fr       */
+/*   Updated: 2021/02/06 15:10:31 by yayito           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+#include "libft.h"
 
 int		ft_isprint(int c)
 {

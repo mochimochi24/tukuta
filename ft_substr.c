@@ -6,12 +6,11 @@
 /*   By: yayito <yayito@student.42tokyo.jp>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/01 14:27:45 by yayito            #+#    #+#             */
-/*   Updated: 2021/02/02 01:52:17 by yayito           ###   ########.fr       */
+/*   Updated: 2021/02/06 15:12:20 by yayito           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
-#include <stdio.h>
+#include "libft.h"
 
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {

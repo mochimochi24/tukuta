@@ -6,13 +6,16 @@
 /*   By: yayito <yayito@student.42tokyo.jp>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/21 12:30:45 by yayito            #+#    #+#             */
-/*   Updated: 2021/02/06 14:55:33 by yayito           ###   ########.fr       */
+/*   Updated: 2021/02/06 15:04:59 by yayito           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 
-#define LIBFT_H
+# define LIBFT_H
+
+# include <stdlib.h>
+# include <unistd.h>
 
 void		*ft_memset(void *buf, int ch, size_t n);
 void		ft_bzero(void *s, size_t n);

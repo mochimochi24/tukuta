@@ -6,12 +6,11 @@
 /*   By: yayito <yayito@student.42tokyo.jp>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/04 18:43:49 by yayito            #+#    #+#             */
-/*   Updated: 2021/02/04 21:53:52 by yayito           ###   ########.fr       */
+/*   Updated: 2021/02/06 15:13:05 by yayito           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
-#include <stdio.h>
+#include "libft.h"
 
 static int	setdesuka(char const a, char const *set)
 {

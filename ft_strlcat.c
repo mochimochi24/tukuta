@@ -6,12 +6,11 @@
 /*   By: yayito <yayito@student.42tokyo.jp>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/23 08:33:36 by yayito            #+#    #+#             */
-/*   Updated: 2021/01/31 08:25:18 by yayito           ###   ########.fr       */
+/*   Updated: 2021/02/06 15:07:54 by yayito           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <string.h>
+#include "libft.h"
 
 size_t	ft_strlcat(char *dest, const char *src, size_t size)
 {

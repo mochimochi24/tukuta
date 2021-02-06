@@ -6,12 +6,11 @@
 /*   By: yayito <yayito@student.42tokyo.jp>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/22 17:08:12 by yayito            #+#    #+#             */
-/*   Updated: 2021/02/04 21:51:05 by yayito           ###   ########.fr       */
+/*   Updated: 2021/02/06 15:07:09 by yayito           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <string.h>
+#include "libft.h"
 
 int		ft_memcmp(const void *buf1, const void *buf2, size_t n)
 {

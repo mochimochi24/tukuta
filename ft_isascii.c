@@ -6,11 +6,11 @@
 /*   By: yayito <yayito@student.42tokyo.jp>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/27 17:29:46 by yayito            #+#    #+#             */
-/*   Updated: 2021/01/27 17:32:11 by yayito           ###   ########.fr       */
+/*   Updated: 2021/02/06 15:10:19 by yayito           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+#include "libft.h"
 
 int		ft_isascii(int c)
 {

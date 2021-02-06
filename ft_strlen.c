@@ -6,11 +6,11 @@
 /*   By: yayito <yayito@student.42tokyo.jp>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/22 21:14:24 by yayito            #+#    #+#             */
-/*   Updated: 2021/01/23 20:38:02 by yayito           ###   ########.fr       */
+/*   Updated: 2021/02/06 15:07:24 by yayito           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+#include "libft.h"
 
 size_t		ft_strlen(const char *str)
 {

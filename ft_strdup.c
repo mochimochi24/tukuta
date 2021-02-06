@@ -6,13 +6,11 @@
 /*   By: yayito <yayito@student.42tokyo.jp>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/31 08:50:10 by yayito            #+#    #+#             */
-/*   Updated: 2021/02/04 21:46:14 by yayito           ###   ########.fr       */
+/*   Updated: 2021/02/06 15:11:40 by yayito           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
+#include "libft.h"
 
 char	*ft_strdup(const char *s)
 {

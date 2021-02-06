@@ -6,12 +6,11 @@
 /*   By: yayito <yayito@student.42tokyo.jp>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/31 09:55:05 by yayito            #+#    #+#             */
-/*   Updated: 2021/02/04 21:45:39 by yayito           ###   ########.fr       */
+/*   Updated: 2021/02/06 15:16:02 by yayito           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-#include <stdio.h>
+#include "libft.h"
 
 void	ft_putnbr_fd(int n, int fd)
 {

@@ -6,12 +6,11 @@
 /*   By: yayito <yayito@student.42tokyo.jp>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/04 16:19:22 by yayito            #+#    #+#             */
-/*   Updated: 2021/02/04 21:45:05 by yayito           ###   ########.fr       */
+/*   Updated: 2021/02/06 15:13:49 by yayito           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
-#include <stdio.h>
+#include "libft.h"
 
 static int	length_of_int(int nn)
 {

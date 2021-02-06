@@ -6,12 +6,11 @@
 /*   By: yayito <yayito@student.42tokyo.jp>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/22 09:25:17 by yayito            #+#    #+#             */
-/*   Updated: 2021/02/06 14:23:11 by yayito           ###   ########.fr       */
+/*   Updated: 2021/02/06 15:06:11 by yayito           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <string.h>
+#include "libft.h"
 
 void	*ft_memcpy(void *buf1, const void *buf2, size_t n)
 {

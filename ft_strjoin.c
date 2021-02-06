@@ -6,12 +6,11 @@
 /*   By: yayito <yayito@student.42tokyo.jp>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/02 01:58:48 by yayito            #+#    #+#             */
-/*   Updated: 2021/02/04 18:10:57 by yayito           ###   ########.fr       */
+/*   Updated: 2021/02/06 15:12:40 by yayito           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
-#include <stdio.h>
+#include "libft.h"
 
 char	*ft_strjoin(char const *s1, char const *s2)
 {
