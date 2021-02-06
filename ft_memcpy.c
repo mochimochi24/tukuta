@@ -6,7 +6,7 @@
 /*   By: yayito <yayito@student.42tokyo.jp>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/22 09:25:17 by yayito            #+#    #+#             */
-/*   Updated: 2021/01/30 21:20:03 by yayito           ###   ########.fr       */
+/*   Updated: 2021/02/06 14:23:11 by yayito           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ void	*ft_memcpy(void *buf1, const void *buf2, size_t n)
 	const char	*bf2;
 	size_t		i;
 
-	if (!buf1)
+	if (!buf1 && !buf2)
 		return (NULL);
 	bf1 = (char*)buf1;
 	bf2 = (const char*)buf2;
