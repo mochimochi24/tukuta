@@ -6,22 +6,13 @@
 /*   By: yayito <yayito@student.42tokyo.jp>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/04 21:57:10 by yayito            #+#    #+#             */
-/*   Updated: 2021/02/05 22:21:53 by yayito           ###   ########.fr       */
+/*   Updated: 2021/02/06 12:23:48 by yayito           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 #include <stdio.h>
 #include <string.h>
-
-static char	**nulnul(void)
-{
-	char	**nu;
-
-	nu = (char**)malloc(sizeof(char) * 1);
-	nu[0] = NULL;
-	return (nu);
-}
 
 static char	**makepoipoi(char const *s, char c)
 {
@@ -72,7 +63,7 @@ static char	**zenkesi(char **ret)
 	return (NULL);
 }
 
-static char **fillret(char const *s, char c, char **ret)
+static char	**fillret(char const *s, char c, char **ret)
 {
 	int		i;
 	int		j;
@@ -101,12 +92,16 @@ static char **fillret(char const *s, char c, char **ret)
 	return (ret);
 }
 
-char	**ft_split(char const *s, char c)
+char		**ft_split(char const *s, char c)
 {
 	char	**ret;
 
-	if (s[0] == '\0' && c =='\0')
-		return (nulnul());
+	if (s[0] == '\0' && c == '\0')
+	{
+		ret = (char**)malloc(sizeof(char) * 1);
+		ret[0] = NULL;
+		return (ret);
+	}
 	ret = makepoipoi(s, c);
 	if (!ret)
 		return (ret);
