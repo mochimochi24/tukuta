@@ -6,7 +6,7 @@
 /*   By: yayito <yayito@student.42tokyo.jp>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/21 15:55:00 by yayito            #+#    #+#             */
-/*   Updated: 2021/02/06 15:03:15 by yayito           ###   ########.fr       */
+/*   Updated: 2021/02/09 04:55:47 by yayito           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ void	*ft_memset(void *buf, int ch, size_t n)
 {
 	unsigned char	moji;
 	unsigned char	*b;
-	int				i;
+	size_t			i;
 
 	moji = ch;
 	b = (unsigned char*)buf;

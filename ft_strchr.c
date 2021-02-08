@@ -6,7 +6,7 @@
 /*   By: yayito <yayito@student.42tokyo.jp>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/26 18:17:23 by yayito            #+#    #+#             */
-/*   Updated: 2021/02/06 15:08:14 by yayito           ###   ########.fr       */
+/*   Updated: 2021/02/09 05:14:28 by yayito           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 char	*ft_strchr(const char *s, int c)
 {
-	int			i;
+	size_t		i;
 	char		*ret;
 	char		cc;
 

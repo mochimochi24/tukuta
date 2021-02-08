@@ -6,7 +6,7 @@
 /*   By: yayito <yayito@student.42tokyo.jp>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/04 18:08:55 by yayito            #+#    #+#             */
-/*   Updated: 2021/02/06 15:14:25 by yayito           ###   ########.fr       */
+/*   Updated: 2021/02/09 05:21:42 by yayito           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,8 +15,10 @@
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
 	char	*ret;
-	int		i;
+	size_t	i;
 
+	if (!s || !f)
+		return (NULL);
 	i = 0;
 	ret = (char*)malloc(ft_strlen(s) + 1);
 	if (!ret)

@@ -6,7 +6,7 @@
 /*   By: yayito <yayito@student.42tokyo.jp>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/04 21:57:10 by yayito            #+#    #+#             */
-/*   Updated: 2021/02/06 15:13:19 by yayito           ###   ########.fr       */
+/*   Updated: 2021/02/09 04:48:45 by yayito           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -94,6 +94,12 @@ char		**ft_split(char const *s, char c)
 {
 	char	**ret;
 
+	if (!s)
+	{
+		ret = (char**)malloc(sizeof(char) * 1);
+		ret[0] = NULL;
+		return (ret);
+	}
 	if (s[0] == '\0' && c == '\0')
 	{
 		ret = (char**)malloc(sizeof(char) * 1);
@@ -107,28 +113,24 @@ char		**ft_split(char const *s, char c)
 }
 
 /*
+**#inclu
 **int		main(void)
 **{
-**	char	str[50] = "";
-**	char	str[50] = "      split       this for   me  !       ";
-**	char	str[50] = "olol                     ";
-**	char	*ptr;
-**	char	**ret;
-**	int		i = 0;
+**char	str[50] = "      split       this for   me  !       ";
+**char	*ptr;
+**char	**ret;
+**int		i = 0;
 **
-**	ptr = &str[0];
-**	ret = ft_split(ptr, ' ');
-**	printf("result:\n");
-**	printf("\nresult...\n%s\n", re[0]);
-**	printf("%s\n", re[1]);
-**	printf("%s\n", re[2]);
-**	printf("%s", re[3]);
-**	while (ret[i] != 0)
-**	{
-**		printf("ret[%d]...%s\n",i , ret[i]);
-**		i++;
-**	}
-**	printf("ret[%d]...%s = %p",i , ret[i], ret[i]);
-**	return (0);
+**ptr = &str[0];
+**ptr = NULL;
+**ret = ft_split(ptr, ' ');
+**printf("result:\n");
+**while (ret[i] != 0)
+**{
+**printf("ret[%d]...%s\n",i , ret[i]);
+**i++;
+**}
+**printf("ret[%d]...%s = %p",i , ret[i], ret[i]);
+**return (0);
 **}
 */

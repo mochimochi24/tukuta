@@ -6,7 +6,7 @@
 /*   By: yayito <yayito@student.42tokyo.jp>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/22 11:36:24 by yayito            #+#    #+#             */
-/*   Updated: 2021/02/06 15:06:04 by yayito           ###   ########.fr       */
+/*   Updated: 2021/02/09 05:11:54 by yayito           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ void	*ft_memccpy(void *dest, const void *src, int c, size_t n)
 		de[i] = s[i];
 		i++;
 	}
-	if (s[i] == moji)
+	if (s[i] == moji && n != 0)
 	{
 		de[i] = s[i];
 		i++;
@@ -38,22 +38,17 @@ void	*ft_memccpy(void *dest, const void *src, int c, size_t n)
 	}
 	return (NULL);
 }
-
 /*
+**#include <stri
+**#include <stdi
 **int		main(void)
 **{
-**char	buff1[] = "abcdefghijklmnopqrstuvwxyz";
-**char	buff2[] = "abcdefghijklmnopqrstuvwxyz";
-**char	*src = "string with\200inside !";
-**memccpy(buff1, src, 116, 21);
-**ft_memccpy(buff2, src, 116, 21);
+**char	buff1[] = "";
+**char	buff2[] = "";
+**char	*src = "";
+**printf("ret.or...%p\n", memccpy(buff1, src, 0, 0));
+**printf("ret.ft...%p\n", ft_memccpy(buff2, src, 0, 0));
 **
-**Xchar		str1[10] = "123456789";
-**Xconst char	str2[10] = "abcde";
-**Xchar		*ptr = &str1[2];
-**
-**Xprintf("pointer...%p\n", ft_memccpy(ptr, str2, '5', 4));
-**Xprintf("dest...%s", str1);
 **printf("memccpy...%s\n", buff1);
 **printf("ft...%s", buff2);
 **return (0);

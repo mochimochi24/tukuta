@@ -6,7 +6,7 @@
 /*   By: yayito <yayito@student.42tokyo.jp>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/31 09:37:15 by yayito            #+#    #+#             */
-/*   Updated: 2021/02/06 15:15:06 by yayito           ###   ########.fr       */
+/*   Updated: 2021/02/09 05:12:55 by yayito           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	ft_putstr_fd(char *s, int fd)
 {
-	int		i;
+	size_t	i;
 	char	str;
 
 	i = 0;

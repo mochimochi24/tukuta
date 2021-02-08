@@ -6,7 +6,7 @@
 /*   By: yayito <yayito@student.42tokyo.jp>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/04 18:43:49 by yayito            #+#    #+#             */
-/*   Updated: 2021/02/06 15:13:05 by yayito           ###   ########.fr       */
+/*   Updated: 2021/02/09 05:31:33 by yayito           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 static int	setdesuka(char const a, char const *set)
 {
-	int		i;
+	size_t	i;
 
 	i = 0;
 	while (set[i])
@@ -27,11 +27,13 @@ static int	setdesuka(char const a, char const *set)
 
 char		*ft_strtrim(char const *s1, char const *set)
 {
-	char	*ret;
-	int		hidari;
-	int		migi;
-	int		i;
+	char		*ret;
+	long long	hidari;
+	long long	migi;
+	long long	i;
 
+	if (!s1 || !set)
+		return (NULL);
 	i = 0;
 	hidari = 0;
 	while (s1[hidari] && setdesuka(s1[hidari], set) == 1)

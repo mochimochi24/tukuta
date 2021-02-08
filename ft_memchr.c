@@ -6,7 +6,7 @@
 /*   By: yayito <yayito@student.42tokyo.jp>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/22 13:21:05 by yayito            #+#    #+#             */
-/*   Updated: 2021/02/06 15:06:51 by yayito           ###   ########.fr       */
+/*   Updated: 2021/02/09 04:53:50 by yayito           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ void	*ft_memchr(const void *buf, int ch, size_t n)
 {
 	const char	*bu;
 	char		c;
-	int			i;
+	size_t		i;
 	void		*ret;
 
 	bu = (const char*)buf;
