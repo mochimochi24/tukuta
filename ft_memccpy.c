@@ -6,7 +6,7 @@
 /*   By: yayito <yayito@student.42tokyo.jp>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/22 11:36:24 by yayito            #+#    #+#             */
-/*   Updated: 2021/02/09 05:11:54 by yayito           ###   ########.fr       */
+/*   Updated: 2021/02/10 05:21:52 by yayito           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,8 +18,9 @@ void	*ft_memccpy(void *dest, const void *src, int c, size_t n)
 	unsigned char		*s;
 	size_t				i;
 	unsigned char		moji;
-	void				*ret;
 
+	if ((!dest || !src) && n == 0)
+		return (NULL);
 	de = (unsigned char*)dest;
 	s = (unsigned char*)src;
 	moji = (unsigned char)c;
@@ -33,24 +34,26 @@ void	*ft_memccpy(void *dest, const void *src, int c, size_t n)
 	{
 		de[i] = s[i];
 		i++;
-		ret = (void*)&de[i];
-		return (ret);
+		if (de[i] != '\0')
+			return ((void*)&de[i]);
 	}
 	return (NULL);
 }
 /*
-**#include <stri
-**#include <stdi
+**nclude <string.h>
+**nclude <stdio.h>
 **int		main(void)
 **{
-**char	buff1[] = "";
-**char	buff2[] = "";
-**char	*src = "";
-**printf("ret.or...%p\n", memccpy(buff1, src, 0, 0));
-**printf("ret.ft...%p\n", ft_memccpy(buff2, src, 0, 0));
-**
-**printf("memccpy...%s\n", buff1);
-**printf("ft...%s", buff2);
+**char dst[10] = "aa";
+**char src[10] = "cc";
+**printf("dst = %p\n",dst);
+**char dst2[10] = "aa";
+**char src2[10] = "cc";
+**printf("dst = %p\n",dst2);
+**printf("or.adr...%p\n", memccpy(dst, src, '\0', 2));
+**printf("or.dst...%s\n", dst);
+**printf("ft.adr...%p\n",ft_memccpy(dst2, src2, '\0', 2));
+**printf("ft.dst...%s\n", dst2);
 **return (0);
 **}
 */

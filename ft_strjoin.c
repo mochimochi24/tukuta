@@ -6,7 +6,7 @@
 /*   By: yayito <yayito@student.42tokyo.jp>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/02 01:58:48 by yayito            #+#    #+#             */
-/*   Updated: 2021/02/09 05:32:52 by yayito           ###   ########.fr       */
+/*   Updated: 2021/02/09 07:07:48 by yayito           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,11 +18,11 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	size_t	j;
 	char	*ret;
 
-	i = 0;
-	j = 0;
 	if (!s1 || !s2)
 		return (NULL);
-	ret = (char*)malloc(ft_strlen(s1) + ft_strlen(s2) + 1);
+	i = 0;
+	j = 0;
+	ret = malloc(ft_strlen(s1) + ft_strlen(s2) + 1);
 	if (!ret)
 		return (NULL);
 	while (s1[i])
@@ -33,9 +33,7 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	}
 	i = 0;
 	while (s2[i])
-	{
 		ret[j++] = s2[i++];
-	}
 	ret[j] = '\0';
 	return (ret);
 }

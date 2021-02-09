@@ -6,7 +6,7 @@
 /*   By: yayito <yayito@student.42tokyo.jp>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/04 21:57:10 by yayito            #+#    #+#             */
-/*   Updated: 2021/02/09 04:48:45 by yayito           ###   ########.fr       */
+/*   Updated: 2021/02/09 06:06:23 by yayito           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 static char	**makepoipoi(char const *s, char c)
 {
-	char	**poipoi;
-	int		i;
-	int		yousosu;
+	char		**poipoi;
+	long long	i;
+	long long	yousosu;
 
 	yousosu = 0;
 	if (s[0] != c)
@@ -39,7 +39,7 @@ static char	**makepoipoi(char const *s, char c)
 
 static int	partlen(char const *s, char c, int j)
 {
-	int		i;
+	long long	i;
 
 	i = 0;
 	while (s[j] != '\0' && s[j] != c)
@@ -52,7 +52,7 @@ static int	partlen(char const *s, char c, int j)
 
 static char	**zenkesi(char **ret)
 {
-	int		i;
+	long long	i;
 
 	i = 0;
 	while (ret[i])
@@ -63,10 +63,10 @@ static char	**zenkesi(char **ret)
 
 static char	**fillret(char const *s, char c, char **ret)
 {
-	int		i;
-	int		j;
-	int		leng;
-	int		nn;
+	long long	i;
+	long long	j;
+	long long	leng;
+	long long	nn;
 
 	nn = 0;
 	j = 0;
@@ -95,14 +95,10 @@ char		**ft_split(char const *s, char c)
 	char	**ret;
 
 	if (!s)
-	{
-		ret = (char**)malloc(sizeof(char) * 1);
-		ret[0] = NULL;
-		return (ret);
-	}
+		return (NULL);
 	if (s[0] == '\0' && c == '\0')
 	{
-		ret = (char**)malloc(sizeof(char) * 1);
+		ret = (char**)malloc(sizeof(char*) * 1);
 		ret[0] = NULL;
 		return (ret);
 	}
