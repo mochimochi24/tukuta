@@ -6,7 +6,7 @@
 /*   By: yayito <yayito@student.42tokyo.jp>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/22 11:36:24 by yayito            #+#    #+#             */
-/*   Updated: 2021/02/10 05:21:52 by yayito           ###   ########.fr       */
+/*   Updated: 2021/02/10 22:07:19 by yayito           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,12 +30,11 @@ void	*ft_memccpy(void *dest, const void *src, int c, size_t n)
 		de[i] = s[i];
 		i++;
 	}
-	if (s[i] == moji && n != 0)
+	if (s[i] == moji && n > i)
 	{
 		de[i] = s[i];
 		i++;
-		if (de[i] != '\0')
-			return ((void*)&de[i]);
+		return ((void*)&de[i]);
 	}
 	return (NULL);
 }
@@ -44,16 +43,13 @@ void	*ft_memccpy(void *dest, const void *src, int c, size_t n)
 **nclude <stdio.h>
 **int		main(void)
 **{
-**char dst[10] = "aa";
-**char src[10] = "cc";
+**char dst[3] = "a";
+**char src[3] = "12";
 **printf("dst = %p\n",dst);
-**char dst2[10] = "aa";
-**char src2[10] = "cc";
-**printf("dst = %p\n",dst2);
-**printf("or.adr...%p\n", memccpy(dst, src, '\0', 2));
+**printf("or.adr...%s\n", memccpy(dst, src, '\0', 3));
 **printf("or.dst...%s\n", dst);
-**printf("ft.adr...%p\n",ft_memccpy(dst2, src2, '\0', 2));
-**printf("ft.dst...%s\n", dst2);
+**printf("ft.adr...%s\n",ft_memccpy(dst, src, '\0', 3));
+**printf("ft.dst...%s\n", dst);
 **return (0);
 **}
 */
