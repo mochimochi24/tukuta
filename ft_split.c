@@ -6,7 +6,7 @@
 /*   By: yayito <yayito@student.42tokyo.jp>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/04 21:57:10 by yayito            #+#    #+#             */
-/*   Updated: 2021/02/09 06:06:23 by yayito           ###   ########.fr       */
+/*   Updated: 2021/02/11 13:27:47 by yayito           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -96,7 +96,7 @@ char		**ft_split(char const *s, char c)
 
 	if (!s)
 		return (NULL);
-	if (s[0] == '\0' && c == '\0')
+	if (s[0] == '\0')
 	{
 		ret = (char**)malloc(sizeof(char*) * 1);
 		ret[0] = NULL;
@@ -109,17 +109,16 @@ char		**ft_split(char const *s, char c)
 }
 
 /*
-**#inclu
+**nclude <stdio.h>
 **int		main(void)
 **{
-**char	str[50] = "      split       this for   me  !       ";
+**char	str[50] = "";
 **char	*ptr;
 **char	**ret;
 **int		i = 0;
 **
 **ptr = &str[0];
-**ptr = NULL;
-**ret = ft_split(ptr, ' ');
+**ret = ft_split(ptr, '0');
 **printf("result:\n");
 **while (ret[i] != 0)
 **{

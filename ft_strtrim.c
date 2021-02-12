@@ -6,7 +6,7 @@
 /*   By: yayito <yayito@student.42tokyo.jp>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/04 18:43:49 by yayito            #+#    #+#             */
-/*   Updated: 2021/02/09 06:08:32 by yayito           ###   ########.fr       */
+/*   Updated: 2021/02/12 12:14:33 by yayito           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,9 @@ char		*ft_strtrim(char const *s1, char const *set)
 	hidari = 0;
 	while (s1[hidari] && setdesuka(s1[hidari], set) == 1)
 		hidari++;
-	migi = ft_strlen(s1) - 1;
+	migi = (long long)ft_strlen(s1) - 1;
+	if (migi < 0)
+		migi = 0;
 	while (migi > hidari && setdesuka(s1[migi], set) == 1)
 		migi--;
 	ret = (char*)malloc(migi - hidari + 2);
@@ -53,10 +55,10 @@ char		*ft_strtrim(char const *s1, char const *set)
 /*
 **int		main(void)
 **{
-**	char	*s1 = "Hello \t  Please\n Trim me !";
-**	char	*set = " \n\t";
+**char	*s1 = "";
+**char	*set = "";
 **
-**	printf("%s", ft_strtrim(s1, set));
-**	return (0);
+**printf("%s\n", ft_strtrim(s1, set));
+**return (0);
 **}
 */
