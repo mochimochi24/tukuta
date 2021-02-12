@@ -6,7 +6,7 @@
 /*   By: yayito <yayito@student.42tokyo.jp>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/04 18:43:49 by yayito            #+#    #+#             */
-/*   Updated: 2021/02/12 12:14:33 by yayito           ###   ########.fr       */
+/*   Updated: 2021/02/12 13:14:54 by yayito           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,7 +56,7 @@ char		*ft_strtrim(char const *s1, char const *set)
 **int		main(void)
 **{
 **char	*s1 = "";
-**char	*set = "";
+**char	*set = "a";
 **
 **printf("%s\n", ft_strtrim(s1, set));
 **return (0);
